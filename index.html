@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo Beleza Total | Pele, Cabelo e Unhas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .ingredient-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .benefit-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .benefit-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4f46e5;
+            font-weight: bold;
+        }
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">Combo Beleza Total</h1>
+            <p class="text-xl text-indigo-700">Sua fórmula completa para pele radiante, cabelos fortes e unhas saudáveis</p>
+            <div class="w-24 h-1 bg-indigo-500 mx-auto mt-6 rounded-full"></div>
+        </header>
+
+        <!-- Main Product Section -->
+        <div class="flex flex-col lg:flex-row gap-8 mb-16">
+            <!-- Product Image -->
+            <div class="lg:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-2xl flex items-center justify-center p-8 product-card floating-button">
+                        <img src="https://images.unsplash.com/photo-1595475210224-733e107f4cc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Suplementos de beleza" class="w-full h-full object-contain">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-yellow-400 text-yellow-900 font-bold px-4 py-2 rounded-full shadow-lg">
+                        <span class="text-sm">60 cápsulas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="lg:w-1/2">
+                <div class="bg-white rounded-2xl p-8 product-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-semibold">
+                            Mais vendido
+                        </div>
+                        <div class="ml-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">4.8 (1.2k avaliações)</span>
+                        </div>
+                    </div>
+
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Fórmula Completa Pele, Cabelo e Unhas</h2>
+                    <p class="text-gray-600 mb-6">Transforme sua beleza natural com nossa combinação exclusiva de ingredientes que nutrem de dentro para fora.</p>
+
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-indigo-700">R$ 89,90</span>
+                        <span class="text-gray-500 line-through ml-2">R$ 129,90</span>
+                        <span class="bg-red-100 text-red-800 text-sm font-semibold ml-2 px-2 py-1 rounded">30% OFF</span>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="font-semibold text-gray-900 mb-2">Benefícios principais:</h3>
+                        <ul class="space-y-2">
+                            <li class="benefit-item">Pele mais firme e hidratada</li>
+                            <li class="benefit-item">Cabelos mais fortes e com menos queda</li>
+                            <li class="benefit-item">Unhas resistentes e sem descamação</li>
+                            <li class="benefit-item">Ação antioxidante e antienvelhecimento</li>
+                            <li class="benefit-item">Resultados visíveis em 60 dias</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex-1 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart mr-2"></i> Comprar agora
+                        </button>
+                        <button class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-bold py-3 px-6 rounded-lg transition duration-300 flex-1 flex items-center justify-center">
+                            <i class="fas fa-heart mr-2"></i> Favoritar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ingredients Section -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Ingredientes Poderosos</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Biotina -->
+                <div class="bg-white rounded-xl p-6 text-center product-card">
+                    <div class="ingredient-icon mx-auto mb-4">
+                        <i class="fas fa-spa text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Biotina</h3>
+                    <p class="text-gray-600 text-sm">Vitamina B7 essencial para crescimento capilar e fortalecimento das unhas</p>
+                </div>
+                
+                <!-- Colágeno -->
+                <div class="bg-white rounded-xl p-6 text-center product-card">
+                    <div class="ingredient-icon mx-auto mb-4">
+                        <i class="fas fa-leaf text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Colágeno Hidrolisado</h3>
+                    <p class="text-gray-600 text-sm">Melhora firmeza e elasticidade da pele, cabelos e unhas</p>
+                </div>
+                
+                <!-- Vitamina C -->
+                <div class="bg-white rounded-xl p-6 text-center product-card">
+                    <div class="ingredient-icon mx-auto mb-4">
+                        <i class="fas fa-bolt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Vitamina C</h3>
+                    <p class="text-gray-600 text-sm">Antioxidante que ajuda na produção de colágeno</p>
+                </div>
+                
+                <!-- Zinco -->
+                <div class="bg-white rounded-xl p-6 text-center product-card">
+                    <div class="ingredient-icon mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Zinco</h3>
+                    <p class="text-gray-600 text-sm">Mineral importante para regeneração da pele e crescimento capilar</p>
+                </div>
+                
+                <!-- Óleo de Prímula -->
+                <div class="bg-white rounded-xl p-6 text-center product-card">
+                    <div class="ingredient-icon mx-auto mb-4">
+                        <i class="fas fa-tint text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Óleo de Prímula</h3>
+                    <p class="text-gray-600 text-sm">Rico em ômega-6, ajuda na hidratação da pele</p>
+                </div>
+                
+                <!-- Silício -->
+                <div class="bg-white rounded-xl p-6 text-center product-card">
+                    <div class="ingredient-icon mx-auto mb-4">
+                        <i class="fas fa-gem text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Silício Orgânico</h3>
+                    <p class="text-gray-600 text-sm">Fortalece unhas e cabelo, ajuda na síntese de colágeno</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Use Section -->
+        <div class="mb-16">
+            <div class="bg-white rounded-2xl p-8 product-card">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Modo de Usar</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-4 flex items-center">
+                            <i class="fas fa-calendar-alt mr-3"></i> Recomendação de uso
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-pills text-indigo-500 mt-1 mr-3"></i>
+                                <span>Tomar 2 cápsulas ao dia (1 pela manhã e 1 à noite)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-glass-whiskey text-indigo-500 mt-1 mr-3"></i>
+                                <span>Ingerir com água, preferencialmente junto às refeições</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-clock text-indigo-500 mt-1 mr-3"></i>
+                                <span>Duração mínima recomendada: 60 dias para resultados visíveis</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-4 flex items-center">
+                            <i class="fas fa-utensils mr-3"></i> Dicas para potencializar
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-carrot text-indigo-500 mt-1 mr-3"></i>
+                                <span>Consuma alimentos ricos em vitamina C junto com o suplemento</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-tint text-indigo-500 mt-1 mr-3"></i>
+                                <span>Mantenha-se hidratada bebendo pelo menos 2L de água por dia</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-bed text-indigo-500 mt-1 mr-3"></i>
+                                <span>Durma bem - o sono é essencial para a regeneração celular</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Precautions Section -->
+        <div class="mb-16">
+            <div class="bg-white rounded-2xl p-8 product-card">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Precauções e Cuidados</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-red-600 mb-4 flex items-center">
+                            <i class="fas fa-exclamation-triangle mr-3"></i> Contraindicações
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-baby text-red-500 mt-1 mr-3"></i>
+                                <span>Gestantes e lactantes devem consultar médico antes de usar</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-allergies text-red-500 mt-1 mr-3"></i>
+                                <span>Pessoas com alergia a algum componente devem evitar</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-procedures text-red-500 mt-1 mr-3"></i>
+                                <span>Pacientes com doenças autoimunes ou em uso de medicamentos específicos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-yellow-600 mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-3"></i> Efeitos colaterais possíveis
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-stomach text-yellow-500 mt-1 mr-3"></i>
+                                <span>Desconforto gástrico em casos isolados</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-allergies text-yellow-500 mt-1 mr-3"></i>
+                                <span>Reações alérgicas leves em pessoas sensíveis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-poo text-yellow-500 mt-1 mr-3"></i>
+                                <span>Pode causar diarreia ou alteração no paladar</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-info-circle text-blue-500 text-xl"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-blue-700">
+                                <strong>Importante:</strong> Este produto não substitui uma alimentação equilibrada. Mantenha hábitos saudáveis e em caso de dúvidas consulte um profissional de saúde.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">O que dizem nossas clientes</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl p-6 product-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                            <i class="fas fa-user text-indigo-600 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Ana Clara</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Depois de 2 meses usando, minhas unhas pararam de descamar completamente! Meu cabelo também está crescendo mais rápido e com menos queda. Super recomendo!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl p-6 product-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                            <i class="fas fa-user text-indigo-600 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Juliana</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Minha pele está muito mais hidratada e com menos linhas de expressão. Percebi diferença já no primeiro mês. Vou continuar usando!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl p-6 product-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                            <i class="fas fa-user text-indigo-600 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Roberta</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Comprei para fortalecer as unhas e acabei ganhando cabelos mais brilhosos e pele mais bonita também. Vale cada centavo!"
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mb-16">
+            <div class="bg-white rounded-2xl p-8 product-card">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Perguntas Frequentes</h2>
+                
+                <div class="space-y-6">
+                    <!-- Question 1 -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-gray-800 hover:text-indigo-600 focus:outline-none">
+                            <span>Quanto tempo leva para ver resultados?</span>
+                            <i class="fas fa-chevron-down text-indigo-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="mt-2 text-gray-600">
+                            Os primeiros resultados podem ser percebidos a partir de 30 dias de uso contínuo, mas o período ideal para avaliação completa é de 60 dias, tempo necessário para renovação celular.
+                        </div>
+                    </div>
+                    
+                    <!-- Question 2 -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-gray-800 hover:text-indigo-600 focus:outline-none">
+                            <span>Posso usar junto com outros suplementos?</span>
+                            <i class="fas fa-chevron-down text-indigo-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="mt-2 text-gray-600">
+                            Geralmente sim, mas recomendamos consultar um profissional de saúde se você já faz uso de outros suplementos ou medicamentos para evitar interações.
+                        </div>
+                    </div>
+                    
+                    <!-- Question 3 -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-gray-800 hover:text-indigo-600 focus:outline-none">
+                            <span>Qual a diferença para outros produtos no mercado?</span>
+                            <i class="fas fa-chevron-down text-indigo-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="mt-2 text-gray-600">
+                            Nosso combo reúne em uma única fórmula os principais ativos para beleza capilar, da pele e das unhas, com dosagens equilibradas e ingredientes de alta qualidade, tudo em cápsulas fáceis de ingerir.
+                        </div>
+                    </div>
+                    
+                    <!-- Question 4 -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-gray-800 hover:text-indigo-600 focus:outline-none">
+                            <span>Há algum efeito colateral comum?</span>
+                            <i class="fas fa-chevron-down text-indigo-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="mt-2 text-gray-600">
+                            A maioria das pessoas não apresenta efeitos colaterais. Em casos raros pode ocorrer desconforto gástrico leve, que geralmente desaparece tomando o suplemento junto com as refeições.
+                        </div>
+                    </div>
+                    
+                    <!-- Question 5 -->
+                    <div class="pb-4">
+                        <button class="flex justify-between items-center w-full text-left font-semibold text-gray-800 hover:text-indigo-600 focus:outline-none">
+                            <span>Posso parar de usar depois de ver resultados?</span>
+                            <i class="fas fa-chevron-down text-indigo-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="mt-2 text-gray-600">
+                            Recomendamos uso contínuo por pelo menos 3-6 meses para resultados mais duradouros. Após esse período, você pode fazer pausas ou usar de forma intermitente conforme necessidade.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center mb-16">
+            <div class="bg-indigo-700 rounded-2xl p-8 md:p-12 product-card">
+                <h2 class="text-3xl font-bold text-white mb-4">Pronta para transformar sua beleza natural?</h2>
+                <p class="text-indigo-100 mb-8 text-lg">Experimente nosso Combo Beleza Total e sinta a diferença em 60 dias!</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-white hover:bg-gray-100 text-indigo-700 font-bold py-4 px-8 rounded-lg transition duration-300">
+                        <i class="fas fa-shopping-cart mr-2"></i> Comprar agora
+                    </button>
+                    <button class="border-2 border-white hover:bg-indigo-800 text-white font-bold py-4 px-8 rounded-lg transition duration-300">
+                        <i class="fas fa-question-circle mr-2"></i> Tirar dúvidas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Combo Beleza Total</h3>
+                    <p class="text-gray-400">Sua fórmula completa para pele, cabelos e unhas mais saudáveis e bonitos.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Institucional</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sobre nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Política de privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Termos de uso</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Ajuda</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Dúvidas frequentes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Entregas e prazos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Trocas e devoluções</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">contato@combobelezatotal.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">(11) 99999-9999</span>
+                        </li>
+                        <li class="flex items-center mt-4">
+                            <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-instagram text-xl"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-facebook text-xl"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp text-xl"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>© 2023 Combo Beleza Total. Todos os direitos reservados.</p>
+                <p class="mt-2 text-sm">Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ toggle functionality
+        document.querySelectorAll('.border-b button').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
